@@ -9,21 +9,41 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
  
  <!-- this is our beans -->
- <!-- beans -->
  
+
+ <!-- bean 1 -->
  
- <bean class="com.springcore.Student" name="student1">
- 	<property name="studentId">
- 		<value>22344</value>
- 	</property>
+ <!-- this bean class is declare with the help of property tag
  
- 	<property name="studentName"> 
- 		<value>Shivam Pal</value>
- 	</property>
+  <bean class="com.springcore.Student" name="student1">
+ 	<property name="studentId" value="1234"/>
+ 		
+    <property name="studentName" value="Nimo"/> 
+ 		
+ 	<property name="studentAddress" value="Bangluru"/>
  	
- 	<property name="studentAddress">
- 		<value>Lucknow</value>
- 	</property>
  </bean>
+ 
+ 
+  <bean class="com.springcore.Student" name="student2">
+ 	<property name="studentId" value="4567"/>
+ 		
+    <property name="studentName" value="Sivao"/> 
+ 		
+ 	<property name="studentAddress" value="Goa"/>
+ 	
+ </bean>
+ 
+  -->
+  
+  <!-- This beans are declare with help of schema p  -->
+  <!-- our first bean -->
+  
+  <bean class="com.springcore.Student" name="student1" p:studentId="2324" p:studentName="Ram Singh" p:studentAddress="Lucknow"/>
+ 
+ <!-- our second bean -->
+   <bean class="com.springcore.Student" name="student2" p:studentId="2424" p:studentName="Shyam Singh" p:studentAddress="Kanpur"/>
+ 
+
  
 </beans>
